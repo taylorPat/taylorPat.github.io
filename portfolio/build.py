@@ -1,5 +1,6 @@
 
 from pathlib import Path
+import shutil
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 import yaml
@@ -31,11 +32,20 @@ def write_output(html: str, save_path: Path):
     save_path.parent.mkdir(parents=True, exist_ok=True)
     with save_path.open("w", encoding="utf-8") as file:
         file.write(html)
+    
+
+def copy_static():
+    static_src = BASE_PATH / "static"
+    static_dst = OUTPUT_DIR / "static"
+    if static_dst.exists():
+        shutil.rmtree(static_dst)
+    shutil.copytree(static_src, static_dst)
 
 def build():
-    data = load_data(file_path=PROFILE_FILE)
+    data = load_data(PROFILE_FILE)
     html = render_template(data, TEMPLATES_DIR, "index.html")
     write_output(html, OUTPUT_FILE)
+    copy_static()
     print(f"Wrote {OUTPUT_FILE}")
 
 
