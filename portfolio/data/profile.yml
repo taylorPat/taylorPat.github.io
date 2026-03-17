@@ -1,0 +1,26 @@
+name: Patrick Schneider
+title: Software Engineer
+
+about: >
+  Short professional summary.
+
+contact:
+  email: "you@mail.com"
+  github: "https://taylorpat.github.io/"
+  linkedin: "https://linkedin.com/in/you"
+
+skills:
+  - Python
+  - Machine Learning
+  - Web Development
+
+projects:
+  - name: "Project One"
+    description: "Short description"
+    tech: ["Python", "FastAPI"]
+    link: "https://github.com/you/project1"
+
+  - name: "Project Two"
+    description: "Another project"
+    tech: ["ML", "PyTorch"]
+    link: "https://github.com/you/project2"
