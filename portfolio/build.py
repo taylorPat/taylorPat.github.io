@@ -8,7 +8,7 @@ BASE_PATH = Path(__file__).resolve().parent
 PROFILE_FILE = BASE_PATH / "data" / "profile.yml"
 
 TEMPLATES_DIR=BASE_PATH / "templates"
-OUTPUT_DIR = BASE_PATH / "output"
+OUTPUT_DIR = BASE_PATH.parent / "docs"
 OUTPUT_FILE = OUTPUT_DIR / "index.html"
 
 def load_data(file_path: Path) -> yaml.YAMLObject:
