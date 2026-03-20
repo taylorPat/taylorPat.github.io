@@ -13,7 +13,7 @@ links:
   linkedin: "https://linkedin.com/in/you"
   xing: "https://google.com"
 
-skills:
+skill_groups:
   programming languages:
     - Python
     - bash
@@ -21,6 +21,11 @@ skills:
     - FastApi
     - SQLAlchemy
     - OpenCV
+  cloud:
+    - Azure DevOps
+    - Azure Portal
+    - Docker
+    - Kubernetes
 
 projects:
   - name: "parking transactions analysis"
@@ -92,3 +97,21 @@ projects:
     description: "Another project"
     tech: ["ML", "PyTorch"]
     link: "https://github.com/you/project2"
+
+cv:
+  - company: Audi
+    stations:
+      - role: Software engineer
+        start_year: 2022
+        end_year: 2024
+        activities: "Massive python programming"
+      - role: Software engineer
+        start_year: 2024
+        end_year: 2025
+        activities: "Searching for data and python programming"
+  - company: BMW
+    stations:
+      - role: Software engineer
+        start_year: 2025
+        end_year: 20
+        activities: "Waiting for the enlightenment"
