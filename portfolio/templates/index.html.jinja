@@ -1,0 +1,124 @@
+{% extends "base.html.jinja" %}
+
+{% block content %}
+
+{% set name = name | default('Your Name') %}
+{% set title = title | default('Full Stack Developer') %}
+{% set about = about | default('A concise bio describing who you are and what you build.') %}
+{% set contact = contact | default({}) %}
+{% set email = contact.email | default('you@mail.com') %}
+{% set location = contact.location | default('Your City, Country') %}
+{% set skills = skills | default(['Python', 'JavaScript', 'SQL', 'Django', 'Flask', 'React']) %}
+{% set projects = projects | default([{'name':'Sample Project','description':'A sample project showcasing skills.','tech':['Python'],'link':'#'}]) %}
+{% set experience = experience | default([{'company':'Company','role':'Role','period':'2020-2022','desc':'Short description of responsibilities.'}]) %}
+{% set profile_image = profile_image | default(None) %}
+
+<div class="landing-split">
+  <aside class="left-panel">
+    <div class="left-inner">
+      <div class="profile-avatar-wrap">
+        {% if profile_image %}
+        <img class="profile-avatar" src="{{ profile_image }}" alt="{{ name }}" />
+        {% else %}
+        <div class="profile-avatar placeholder">{{ name[0] }}</div>
+        {% endif %}
+      </div>
+
+      <h1>{{ name }}</h1>
+      <h3 class="muted">{{ title }}</h3>
+      <p class="about">{{ about }}</p>
+
+      <div class="contact-block">
+        <p><strong>Email:</strong> <a href="mailto:{{ email }}">{{ email }}</a></p>
+        <p><strong>Location:</strong> {{ location }}</p>
+      </div>
+    </div>
+  </aside>
+
+  <div class="split-divider" aria-hidden="true"></div>
+
+  <section class="right-panel">
+    <div class="tabs">
+      <nav class="tabs-nav">
+        <button class="tab-btn active" data-tab="skills">Core skills</button>
+        <button class="tab-btn" data-tab="projects">Projects</button>
+        <button class="tab-btn" data-tab="cv">CV / Experience</button>
+      </nav>
+
+      <div class="tabs-content">
+        <div class="tab-panel plain-panel" id="skills" style="display:block">
+          {% set skill_groups = skill_groups | default({
+            'Programming languages': ['Python','JavaScript','TypeScript','Go','Rust'],
+            'Frameworks': ['Django','Flask','React','FastAPI','Vue'],
+            'Cloud / Infra': ['AWS','GCP','Azure','Docker','Kubernetes'],
+            'Databases': ['Postgres','MySQL','MongoDB','BigQuery'],
+            'Tools': ['Git','Terraform','CI/CD']
+          }) %}
+
+          <div class="skills-columns">
+            {% for section, items in skill_groups.items() %}
+            <div class="skill-section">
+              <h4>{{ section }}</h4>
+              <div class="skill-items">
+                {% for item in items %}
+                  <span class="skill-item" aria-hidden="true">{{ item }}</span>
+                {% endfor %}
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+
+        <div class="tab-panel projects-panel" id="projects" style="display:none">
+          <div class="projects-list">
+            {% for project in projects %}
+            <article class="proj-item">
+              <h3 class="proj-title">{{ project.name | capitalize }}</h3>
+
+              <div class="proj-actions">
+                <a class="proj-btn github" href="{{ project.link or '#' }}" target="_blank" rel="noopener">GitHub</a>
+              </div>
+
+              <div class="proj-skills">
+                {% for tech in project.tech %}
+                  <span class="proj-skill">{{ tech }}</span>
+                {% endfor %}
+              </div>
+            </article>
+            {% endfor %}
+          </div>
+        </div>
+
+        <div class="tab-panel plain-panel" id="cv" style="display:none">
+          <div class="experience-list">
+            {% for e in experience %}
+            <div class="exp-item">
+              <h3>{{ e.role | default('Role') }} — {{ e.company | default('Company') }}</h3>
+              <p class="muted">{{ e.period | default('Period') }}</p>
+              <p>{{ e.desc | default('Short description of responsibilities and achievements.') }}</p>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  const buttons = document.querySelectorAll('.tab-btn');
+  buttons.forEach(btn => btn.addEventListener('click', function(){
+    document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    const tab = btn.dataset.tab;
+    document.querySelectorAll('.tab-panel').forEach(p=>p.style.display='none');
+    document.getElementById(tab).style.display='block';
+  }));
+});
+</script>
+{% endblock %}
