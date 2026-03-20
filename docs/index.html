@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html lang="en">
   <head>
@@ -6,82 +6,322 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Patrick Schneider | Software Engineer</title>
 
-    ```
     <link rel="stylesheet" href="static/style.css" />
-    ```
   </head>
   <body>
-    <header>
+    <div class="site">
+      <main class="site-main">
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="landing-split">
+  <aside class="left-panel">
+    <div class="left-inner">
+      <div class="profile-avatar-wrap">
+        
+        <div class="profile-avatar placeholder">P</div>
+        
+      </div>
+
       <h1>Patrick Schneider</h1>
-      <p>Software Engineer</p>
-    </header>
-
-    ```
-    <main>
-
-<section>
-  <h2>About</h2>
-  <p>Short professional summary.
+      <h3 class="muted">Software Engineer</h3>
+      <p class="about">Short professional summary.
 </p>
-</section>
 
-<section>
-  <h2>Skills</h2>
-  <ul>
-    
-    <li>Python</li>
-    
-    <li>Machine Learning</li>
-    
-    <li>Web Development</li>
-    
-  </ul>
-</section>
+      <div class="contact-block">
+        <p><strong>Email:</strong> <a href="mailto:you@mail.com">you@mail.com</a></p>
+        <p><strong>Location:</strong> Your City, Country</p>
+      </div>
+    </div>
+  </aside>
 
-<section>
-  <h2>Projects</h2>
+  <div class="split-divider" aria-hidden="true"></div>
 
-  ``` 
-  <div class="project">
-    <h3>Project One</h3>
-    <p>Short description</p>
+  <section class="right-panel">
+    <div class="tabs">
+      <nav class="tabs-nav">
+        <button class="tab-btn active" data-tab="skills">Core skills</button>
+        <button class="tab-btn" data-tab="projects">Projects</button>
+        <button class="tab-btn" data-tab="cv">CV / Experience</button>
+      </nav>
 
-    <p>
-      <strong>Tech:</strong>
-       Python,   FastAPI 
-    </p>
+      <div class="tabs-content">
+        <div class="tab-panel plain-panel" id="skills" style="display:block">
+          
 
-    <a href="https://github.com/you/project1" target="_blank">View Project</a>
-  </div>
-  
-  <div class="project">
-    <h3>Project Two</h3>
-    <p>Another project</p>
+          <div class="skills-columns">
+            
+            <div class="skill-section">
+              <h4>Programming languages</h4>
+              <div class="skill-items">
+                
+                  <span class="skill-item" aria-hidden="true">Python</span>
+                
+                  <span class="skill-item" aria-hidden="true">JavaScript</span>
+                
+                  <span class="skill-item" aria-hidden="true">TypeScript</span>
+                
+                  <span class="skill-item" aria-hidden="true">Go</span>
+                
+                  <span class="skill-item" aria-hidden="true">Rust</span>
+                
+              </div>
+            </div>
+            
+            <div class="skill-section">
+              <h4>Frameworks</h4>
+              <div class="skill-items">
+                
+                  <span class="skill-item" aria-hidden="true">Django</span>
+                
+                  <span class="skill-item" aria-hidden="true">Flask</span>
+                
+                  <span class="skill-item" aria-hidden="true">React</span>
+                
+                  <span class="skill-item" aria-hidden="true">FastAPI</span>
+                
+                  <span class="skill-item" aria-hidden="true">Vue</span>
+                
+              </div>
+            </div>
+            
+            <div class="skill-section">
+              <h4>Cloud / Infra</h4>
+              <div class="skill-items">
+                
+                  <span class="skill-item" aria-hidden="true">AWS</span>
+                
+                  <span class="skill-item" aria-hidden="true">GCP</span>
+                
+                  <span class="skill-item" aria-hidden="true">Azure</span>
+                
+                  <span class="skill-item" aria-hidden="true">Docker</span>
+                
+                  <span class="skill-item" aria-hidden="true">Kubernetes</span>
+                
+              </div>
+            </div>
+            
+            <div class="skill-section">
+              <h4>Databases</h4>
+              <div class="skill-items">
+                
+                  <span class="skill-item" aria-hidden="true">Postgres</span>
+                
+                  <span class="skill-item" aria-hidden="true">MySQL</span>
+                
+                  <span class="skill-item" aria-hidden="true">MongoDB</span>
+                
+                  <span class="skill-item" aria-hidden="true">BigQuery</span>
+                
+              </div>
+            </div>
+            
+            <div class="skill-section">
+              <h4>Tools</h4>
+              <div class="skill-items">
+                
+                  <span class="skill-item" aria-hidden="true">Git</span>
+                
+                  <span class="skill-item" aria-hidden="true">Terraform</span>
+                
+                  <span class="skill-item" aria-hidden="true">CI/CD</span>
+                
+              </div>
+            </div>
+            
+          </div>
+        </div>
 
-    <p>
-      <strong>Tech:</strong>
-       ML,   PyTorch 
-    </p>
+        <div class="tab-panel projects-panel" id="projects" style="display:none">
+          <div class="projects-list">
+            
+            <article class="proj-item">
+              <h3 class="proj-title">Parking transactions analysis</h3>
 
-    <a href="https://github.com/you/project2" target="_blank">View Project</a>
-  </div>
-   ```
-</section>
+              <div class="proj-actions">
+                <a class="proj-btn github" href="https://github.com/taylorPat/parking-transactions-analysis" target="_blank" rel="noopener">GitHub</a>
+              </div>
 
-<section>
-  <h2>Contact</h2>
-  <ul>
-    <li>Email: you@mail.com</li>
-    <li><a href="https://taylorpat.github.io/">GitHub</a></li>
-    <li><a href="https://linkedin.com/in/you">LinkedIn</a></li>
-  </ul>
-</section>
+              <div class="proj-skills">
+                
+                  <span class="proj-skill">Python</span>
+                
+                  <span class="proj-skill">Terraform</span>
+                
+                  <span class="proj-skill">Apache Spark</span>
+                
+                  <span class="proj-skill">Google Cloud Storage</span>
+                
+                  <span class="proj-skill">BigQuery</span>
+                
+                  <span class="proj-skill">Looker Studio</span>
+                
+              </div>
+            </article>
+            
+            <article class="proj-item">
+              <h3 class="proj-title">Parking transactions analysis</h3>
+
+              <div class="proj-actions">
+                <a class="proj-btn github" href="https://github.com/taylorPat/parking-transactions-analysis" target="_blank" rel="noopener">GitHub</a>
+              </div>
+
+              <div class="proj-skills">
+                
+                  <span class="proj-skill">Python</span>
+                
+                  <span class="proj-skill">Terraform</span>
+                
+                  <span class="proj-skill">Apache Spark</span>
+                
+                  <span class="proj-skill">Google Cloud Storage</span>
+                
+                  <span class="proj-skill">BigQuery</span>
+                
+                  <span class="proj-skill">Looker Studio</span>
+                
+              </div>
+            </article>
+            
+            <article class="proj-item">
+              <h3 class="proj-title">Parking transactions analysis</h3>
+
+              <div class="proj-actions">
+                <a class="proj-btn github" href="https://github.com/taylorPat/parking-transactions-analysis" target="_blank" rel="noopener">GitHub</a>
+              </div>
+
+              <div class="proj-skills">
+                
+                  <span class="proj-skill">Python</span>
+                
+                  <span class="proj-skill">Terraform</span>
+                
+                  <span class="proj-skill">Apache Spark</span>
+                
+                  <span class="proj-skill">Google Cloud Storage</span>
+                
+                  <span class="proj-skill">BigQuery</span>
+                
+                  <span class="proj-skill">Looker Studio</span>
+                
+              </div>
+            </article>
+            
+            <article class="proj-item">
+              <h3 class="proj-title">Parking transactions analysis</h3>
+
+              <div class="proj-actions">
+                <a class="proj-btn github" href="https://github.com/taylorPat/parking-transactions-analysis" target="_blank" rel="noopener">GitHub</a>
+              </div>
+
+              <div class="proj-skills">
+                
+                  <span class="proj-skill">Python</span>
+                
+                  <span class="proj-skill">Terraform</span>
+                
+                  <span class="proj-skill">Apache Spark</span>
+                
+                  <span class="proj-skill">Google Cloud Storage</span>
+                
+                  <span class="proj-skill">BigQuery</span>
+                
+                  <span class="proj-skill">Looker Studio</span>
+                
+              </div>
+            </article>
+            
+            <article class="proj-item">
+              <h3 class="proj-title">Parking transactions analysis</h3>
+
+              <div class="proj-actions">
+                <a class="proj-btn github" href="https://github.com/taylorPat/parking-transactions-analysis" target="_blank" rel="noopener">GitHub</a>
+              </div>
+
+              <div class="proj-skills">
+                
+                  <span class="proj-skill">Python</span>
+                
+                  <span class="proj-skill">Terraform</span>
+                
+                  <span class="proj-skill">Apache Spark</span>
+                
+                  <span class="proj-skill">Google Cloud Storage</span>
+                
+                  <span class="proj-skill">BigQuery</span>
+                
+                  <span class="proj-skill">Looker Studio</span>
+                
+              </div>
+            </article>
+            
+            <article class="proj-item">
+              <h3 class="proj-title">Project two</h3>
+
+              <div class="proj-actions">
+                <a class="proj-btn github" href="https://github.com/you/project2" target="_blank" rel="noopener">GitHub</a>
+              </div>
+
+              <div class="proj-skills">
+                
+                  <span class="proj-skill">ML</span>
+                
+                  <span class="proj-skill">PyTorch</span>
+                
+              </div>
+            </article>
+            
+          </div>
+        </div>
+
+        <div class="tab-panel plain-panel" id="cv" style="display:none">
+          <div class="experience-list">
+            
+            <div class="exp-item">
+              <h3>Role — Company</h3>
+              <p class="muted">2020-2022</p>
+              <p>Short description of responsibilities.</p>
+            </div>
+            
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</div>
 
 </main>
 
-    <footer>
-      <p>© Patrick Schneider</p>
-    </footer>
-    ```
+      <footer class="site-footer">
+        <div class="container">
+          <p>© Patrick Schneider</p>
+        </div>
+      </footer>
+    </div>
+    
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  const buttons = document.querySelectorAll('.tab-btn');
+  buttons.forEach(btn => btn.addEventListener('click', function(){
+    document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    const tab = btn.dataset.tab;
+    document.querySelectorAll('.tab-panel').forEach(p=>p.style.display='none');
+    document.getElementById(tab).style.display='block';
+  }));
+});
+</script>
+
   </body>
 </html>
