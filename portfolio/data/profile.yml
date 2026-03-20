@@ -2,16 +2,25 @@ name: Patrick Schneider
 title: Software Engineer
 
 about: >
-  Short professional summary.
+  Short professional summary. I like python.
 
 contact:
   email: "my@mail.com"
+  location: "Berlin, Germany"
+
+links:
   github: "https://github.com/taylorPat?tab=repositories"
   linkedin: "https://linkedin.com/in/you"
+  xing: "https://google.com"
 
 skills:
-  - Python
-  - Backend Development
+  programming languages:
+    - Python
+    - bash
+  frameworks:
+    - FastApi
+    - SQLAlchemy
+    - OpenCV
 
 projects:
   - name: "parking transactions analysis"

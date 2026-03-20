@@ -22,8 +22,20 @@
       <p class="about">{{ about }}</p>
 
       <div class="contact-block">
-        <p><strong>Email:</strong> <a href="mailto:{{ email }}">{{ email }}</a></p>
-        <p><strong>Location:</strong> {{ location }}</p>
+        {% if contact is defined and contact.email is defined %}
+          <p><strong>Email:</strong> <a href="mailto:{{ contact.email }}">{{ contact.email }}</a></p>
+        {% endif %}
+        {% if contact is defined and contact.location is defined %}
+          <p><strong>Location:</strong> {{ contact.location }}</p>
+        {% endif %}
+
+        {% if links is defined %}
+        <p class="profile-links">
+          {% for key, url in links.items() %}
+            <a class="btn small" href="{{ url }}" target="_blank" rel="noopener">{{ key | replace('_',' ') | title }}</a>
+          {% endfor %}
+        </p>
+        {% endif %}
       </div>
     </div>
   </aside>

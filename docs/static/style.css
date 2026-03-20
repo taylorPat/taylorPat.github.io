@@ -188,6 +188,10 @@ a:hover {
   display: block;
   margin: 0 auto 1rem auto;
 }
+
+.profile-links .btn {
+  margin-right: 0.5rem;
+}
 .left-panel h1 {
   font-size: 2.4rem;
   margin-bottom: 0.25rem;
