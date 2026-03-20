@@ -6,19 +6,78 @@ about: >
 
 contact:
   email: "you@mail.com"
-  github: "https://taylorpat.github.io/"
+  github: "https://github.com/taylorPat?tab=repositories"
   linkedin: "https://linkedin.com/in/you"
 
 skills:
   - Python
-  - Machine Learning
-  - Web Development
+  - Backend Development
 
 projects:
-  - name: "Project One"
-    description: "Short description"
-    tech: ["Python", "FastAPI"]
-    link: "https://github.com/you/project1"
+  - name: "parking transactions analysis"
+    description: "This project analyzes US parking transaction data to identify patterns in weekday and monthly transaction distributions, providing insights to optimize parking policies and infrastructure."
+    tech:
+      [
+        "Python",
+        "Terraform",
+        "Apache Spark",
+        "Google Cloud Storage",
+        "BigQuery",
+        "Looker Studio",
+      ]
+    link: "https://github.com/taylorPat/parking-transactions-analysis"
+
+  - name: "parking transactions analysis"
+    description: "This project analyzes US parking transaction data to identify patterns in weekday and monthly transaction distributions, providing insights to optimize parking policies and infrastructure."
+    tech:
+      [
+        "Python",
+        "Terraform",
+        "Apache Spark",
+        "Google Cloud Storage",
+        "BigQuery",
+        "Looker Studio",
+      ]
+    link: "https://github.com/taylorPat/parking-transactions-analysis"
+
+  - name: "parking transactions analysis"
+    description: "This project analyzes US parking transaction data to identify patterns in weekday and monthly transaction distributions, providing insights to optimize parking policies and infrastructure."
+    tech:
+      [
+        "Python",
+        "Terraform",
+        "Apache Spark",
+        "Google Cloud Storage",
+        "BigQuery",
+        "Looker Studio",
+      ]
+    link: "https://github.com/taylorPat/parking-transactions-analysis"
+
+  - name: "parking transactions analysis"
+    description: "This project analyzes US parking transaction data to identify patterns in weekday and monthly transaction distributions, providing insights to optimize parking policies and infrastructure."
+    tech:
+      [
+        "Python",
+        "Terraform",
+        "Apache Spark",
+        "Google Cloud Storage",
+        "BigQuery",
+        "Looker Studio",
+      ]
+    link: "https://github.com/taylorPat/parking-transactions-analysis"
+
+  - name: "parking transactions analysis"
+    description: "This project analyzes US parking transaction data to identify patterns in weekday and monthly transaction distributions, providing insights to optimize parking policies and infrastructure."
+    tech:
+      [
+        "Python",
+        "Terraform",
+        "Apache Spark",
+        "Google Cloud Storage",
+        "BigQuery",
+        "Looker Studio",
+      ]
+    link: "https://github.com/taylorPat/parking-transactions-analysis"
 
   - name: "Project Two"
     description: "Another project"
