@@ -113,5 +113,5 @@ cv:
     stations:
       - role: Software engineer
         start_year: 2025
-        end_year: 20
+        end_year: null
         activities: "Waiting for the enlightenment"

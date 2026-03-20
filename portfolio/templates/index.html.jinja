@@ -117,10 +117,16 @@
                           {{ station.get('role') }}
                         </h4>
                         <p class="muted">
-                          {% set sy = station.get('start_year') or station.get('start year') %}
-                          {% set ey = station.get('end_year') or station.get('end year') %}
+                          {% set sy = station.get('start_year') %}
+                          {% set ey = station.get('end_year') %}
                           {% if sy or ey %}
-                            {{ sy }}{% if ey %} – {{ ey if ey is not none else 'Present' }}{% endif %}
+                            {{ sy }} - 
+                            {% if ey is not none %}
+                              {{ ey }}
+                            {% else %}
+                              Present
+                            {% endif %}
+
                           {% endif %}
                         </p>
                         <p>
