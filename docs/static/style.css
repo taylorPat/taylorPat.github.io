@@ -29,7 +29,7 @@ body {
 }
 
 body::before {
-  content: '';
+  content: "";
   position: fixed; /* fixes to viewport */
   top: 0;
   left: 0;
@@ -59,95 +59,7 @@ body {
   width: 100%;
 }
 
-/* Header */
-/* Navigation */
-.site-nav {
-  background: transparent;
-  border-bottom: 1px solid rgba(15, 23, 36, 0.05);
-}
-.site-nav .nav-inner {
-  max-width: 1100px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem;
-}
-.site-nav h1 {
-  font-size: 1rem;
-  margin: 0;
-}
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1rem;
-  margin: 0;
-  padding: 0;
-}
-.nav-links a {
-  color: var(--text);
-  text-decoration: none;
-}
-
-/* Hero */
-.hero {
-  background: linear-gradient(180deg, rgba(37, 99, 235, 0.03), transparent);
-  padding: 2.5rem 0;
-}
-.hero-inner {
-  display: grid;
-  grid-template-columns: 1fr 220px;
-  gap: 1.5rem;
-  align-items: center;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-.hero-title {
-  font-size: 2rem;
-  margin: 0;
-}
-.hero-role {
-  color: var(--accent);
-  margin: 0.25rem 0 1rem;
-}
-.hero-bio {
-  color: var(--muted);
-  margin-bottom: 1rem;
-}
-.profile-img {
-  width: 180px;
-  height: 180px;
-  border-radius: 14px;
-  object-fit: cover;
-  border: 6px solid white;
-  box-shadow: 0 8px 30px rgba(2, 6, 23, 0.06);
-}
-.profile-avatar-wrap {
-  margin-bottom: 1rem;
-}
-.profile-avatar {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 4px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 8px 24px rgba(2, 6, 23, 0.25);
-  display: block;
-  margin: 0 auto;
-}
-.profile-avatar.placeholder {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.06);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 3.2rem;
-  color: var(--text);
-  margin: 0 auto;
-}
+/* Header / Navigation / Hero styles removed (not used in current templates) */
 
 /* Buttons */
 .btn {
@@ -180,53 +92,7 @@ h2 {
   padding-bottom: 0.4rem;
 }
 
-/* Projects grid */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-  margin-top: 1rem;
-}
-.card {
-  background: transparent;
-  border-radius: var(--radius);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  border: 1px solid rgba(255, 255, 255, 0.04);
-}
-.card-body {
-  padding: 1rem;
-}
-.card-title {
-  margin: 0 0 0.5rem;
-  font-size: 1.05rem;
-}
-.card-desc {
-  color: var(--muted);
-  font-size: 0.95rem;
-  margin-bottom: 0.75rem;
-}
-.card-footer {
-  padding: 0.6rem 1rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.04);
-  display: flex;
-  justify-content: flex-end;
-  background: transparent;
-}
-
-.tech-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-}
-.tech {
-  background: rgba(37, 99, 235, 0.08);
-  color: var(--accent);
-  padding: 0.25rem 0.5rem;
-  border-radius: 999px;
-  font-size: 0.85rem;
-}
+/* Legacy project grid/card styles removed (we use .projects-list/.proj-item) */
 
 /* Contact */
 .contact-grid {
@@ -312,6 +178,15 @@ a:hover {
 .left-inner {
   width: 100%;
   text-align: center;
+}
+.profile-avatar {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid rgba(255, 255, 255, 0.08);
+  display: block;
+  margin: 0 auto 1rem auto;
 }
 .left-panel h1 {
   font-size: 2.4rem;
@@ -568,20 +443,6 @@ a:hover {
 .skill-row-label {
   font-size: 0.95rem;
   color: var(--text);
-
-  /* Align CV / Experience typography with Core skills */
-  .experience-list .exp-item h3 {
-    font-size: 1rem; /* match .skill-section h4 */
-    color: var(--text);
-    margin: 0 0 0.35rem 0;
-    font-weight: 700;
-  }
-  .experience-list .exp-item p,
-  .experience-list .exp-item .muted {
-    font-size: 0.9rem; /* match .skill-item */
-    color: var(--text);
-    margin: 0 0 0.5rem 0;
-  }
   margin-bottom: 0.25rem;
 }
 .skill-bar {
