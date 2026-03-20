@@ -22,6 +22,10 @@ body {
     -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   line-height: 1.6;
   background: linear-gradient(to bottom right, #141e30 0%, #243b55 100%);
+  background-attachment: fixed; /* keep gradient locked to viewport */
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
   color: var(--text);
   margin: 0;
 }
@@ -552,19 +556,19 @@ a:hover {
   font-size: 0.95rem;
   color: var(--text);
 
-/* Align CV / Experience typography with Core skills */
-.experience-list .exp-item h3 {
-  font-size: 1rem; /* match .skill-section h4 */
-  color: var(--text);
-  margin: 0 0 0.35rem 0;
-  font-weight: 700;
-}
-.experience-list .exp-item p,
-.experience-list .exp-item .muted {
-  font-size: 0.9rem; /* match .skill-item */
-  color: var(--text);
-  margin: 0 0 0.5rem 0;
-}
+  /* Align CV / Experience typography with Core skills */
+  .experience-list .exp-item h3 {
+    font-size: 1rem; /* match .skill-section h4 */
+    color: var(--text);
+    margin: 0 0 0.35rem 0;
+    font-weight: 700;
+  }
+  .experience-list .exp-item p,
+  .experience-list .exp-item .muted {
+    font-size: 0.9rem; /* match .skill-item */
+    color: var(--text);
+    margin: 0 0 0.5rem 0;
+  }
   margin-bottom: 0.25rem;
 }
 .skill-bar {
