@@ -41,9 +41,14 @@ def copy_static():
         shutil.rmtree(static_dst)
     shutil.copytree(static_src, static_dst)
 
+def create_empty_docs_dir():
+    shutil.rmtree(path=OUTPUT_DIR, ignore_errors=True)
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=False)
+
 def build():
     data = load_data(PROFILE_FILE)
-    html = render_template(data, TEMPLATES_DIR, "index.html")
+    html = render_template(data, TEMPLATES_DIR, "index.html.jinja")
+    create_empty_docs_dir()
     write_output(html, OUTPUT_FILE)
     copy_static()
     print(f"Wrote {OUTPUT_FILE}")
