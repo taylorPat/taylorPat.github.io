@@ -17,17 +17,30 @@
   --btn-font-size: 0.95rem;
 }
 
+/* Use a full-viewport pseudo-element for the gradient to avoid seams on mobile
+   and when content scrolls. This covers the viewport exactly and is fixed. */
 body {
   font-family:
     -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   line-height: 1.6;
-  background: linear-gradient(to bottom right, #141e30 0%, #243b55 100%);
-  background-attachment: fixed; /* keep gradient locked to viewport */
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: none;
   color: var(--text);
   margin: 0;
+}
+
+body::before {
+  content: "";
+  position: fixed; /* fixes to viewport */
+  top: 0;
+  left: 0;
+  width: 100vw; /* full viewport width */
+  height: 100vh; /* full viewport height */
+  z-index: -1; /* behind content */
+  pointer-events: none;
+  background-image: linear-gradient(to bottom right, #141e30 0%, #243b55 100%);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 }
 
 /* Larger base type for landing */
