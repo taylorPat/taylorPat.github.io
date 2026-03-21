@@ -7,6 +7,7 @@ requires-python = ">=3.13"
 dependencies = [
     "jinja2>=3.1.6",
     "pyyaml>=6.0.3",
+    "typer>=0.24.1",
 ]
 
 [dependency-groups]
@@ -15,4 +16,4 @@ dev = [
 ]
 
 [project.scripts]
-portfolio = "portfolio.generate_html:build"
+portfolio = "portfolio.main:app"

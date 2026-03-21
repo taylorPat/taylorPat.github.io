@@ -45,9 +45,9 @@ def _create_empty_docs_dir(output_path: Path):
     shutil.rmtree(path=output_path, ignore_errors=True)
     output_path.mkdir(parents=True, exist_ok=False)
 
-
+DEFAULT_PROFILE_YAML_PATH = Path().cwd() / "data" / "profile.yml"
 def build(file_path: Path | None = None, output_path: Path | None = None):
-    file_path = file_path or Path().cwd() / "data" / "profile.yml"
+    file_path = file_path or DEFAULT_PROFILE_YAML_PATH
     yaml_data = load_data(file_path=file_path)
 
     html = render_template(yaml_data=yaml_data)
