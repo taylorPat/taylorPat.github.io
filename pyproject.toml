@@ -1,5 +1,5 @@
 [project]
-name = "taylorpat-github-io"
+name = "portfolio-generator"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
@@ -13,3 +13,6 @@ dependencies = [
 dev = [
     "ruff>=0.15.7",
 ]
+
+[project.scripts]
+porfolio = "src.portfolio.generate_html"
