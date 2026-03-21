@@ -18,7 +18,7 @@ def load_data(file_path: Path) -> yaml.YAMLObject:
 
 
 def render_template(yaml_data):
-    templates_dir = Path().cwd() / "src" / "portfolio" / "FE" / "templates"
+    templates_dir = Path().cwd() / "data" / "FE" / "templates"
     env = Environment(
         loader=FileSystemLoader(searchpath=str(templates_dir)),
         autoescape=select_autoescape(["html", "xml"]),
@@ -36,7 +36,7 @@ def write_output(html: str, output_path: Path):
 
 
 def _copy_static(output_path: Path):
-    static_src = Path().cwd() / "src" / "portfolio" / "FE" / "static"
+    static_src = Path().cwd() / "data" / "FE" / "static"
     static_dst = output_path / "static"
     shutil.copytree(static_src, static_dst)
 
@@ -47,7 +47,7 @@ def _create_empty_docs_dir(output_path: Path):
 
 
 def build(file_path: Path | None = None, output_path: Path | None = None):
-    file_path = file_path or Path().cwd() / "src" / "profile.yml"
+    file_path = file_path or Path().cwd() / "data" / "profile.yml"
     yaml_data = load_data(file_path=file_path)
 
     html = render_template(yaml_data=yaml_data)
