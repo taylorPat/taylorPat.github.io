@@ -15,4 +15,4 @@ dev = [
 ]
 
 [project.scripts]
-porfolio = "src.portfolio.generate_html"
+portfolio = "portfolio.generate_html:build"
