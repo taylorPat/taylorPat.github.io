@@ -17,13 +17,17 @@ def load_data(file_path: Path) -> yaml.YAMLObject:
         return yaml.safe_load(content)
 
 
-def render_template(yaml_data):
-    templates_dir = Path().cwd() / "data" / "FE" / "templates"
+DEFAULT_TEMPLATE_FOLDER_PATH = Path().cwd() / "data" / "FE" / "templates"
+
+
+def render_template(
+    yaml_data, template_folder_path: Path, html_template_file_name: str
+):
     env = Environment(
-        loader=FileSystemLoader(searchpath=str(templates_dir)),
+        loader=FileSystemLoader(searchpath=str(template_folder_path)),
         autoescape=select_autoescape(["html", "xml"]),
     )
-    template = env.get_template(name="index.html.jinja")
+    template = env.get_template(name=html_template_file_name)
     return template.render(yaml_data)
 
 
@@ -45,14 +49,28 @@ def _create_empty_docs_dir(output_path: Path):
     shutil.rmtree(path=output_path, ignore_errors=True)
     output_path.mkdir(parents=True, exist_ok=False)
 
+
 DEFAULT_PROFILE_YAML_PATH = Path().cwd() / "data" / "profile.yml"
-def build(file_path: Path | None = None, output_path: Path | None = None):
-    file_path = file_path or DEFAULT_PROFILE_YAML_PATH
-    yaml_data = load_data(file_path=file_path)
+DEFAULT_HTML_TEMPLATE_FILE_NAME = "index.html.jinja"
 
-    html = render_template(yaml_data=yaml_data)
 
-    output_path = output_path or Path().cwd() / "docs"
+def build(
+    profile_yaml_path: Path | None = None,
+    template_folder_path: Path | None = None,
+    html_template_file_name: str | None = None,
+):
+    profile_yaml_path = profile_yaml_path or DEFAULT_PROFILE_YAML_PATH
+    yaml_data = load_data(file_path=profile_yaml_path)
+
+    template_folder_path = template_folder_path or DEFAULT_TEMPLATE_FOLDER_PATH
+    html_template_file_name = html_template_file_name or DEFAULT_HTML_TEMPLATE_FILE_NAME
+    html = render_template(
+        yaml_data=yaml_data,
+        template_folder_path=template_folder_path,
+        html_template_file_name=html_template_file_name,
+    )
+
+    output_path = Path().cwd() / "docs"
     write_output(html=html, output_path=output_path)
 
 

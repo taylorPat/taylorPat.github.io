@@ -2,10 +2,32 @@ from pathlib import Path
 from typing import Annotated
 import typer
 
-from src.portfolio.generate_html import DEFAULT_PROFILE_YAML_PATH
+from portfolio.generate_html import (
+    DEFAULT_HTML_TEMPLATE_FILE_NAME,
+    DEFAULT_PROFILE_YAML_PATH,
+    DEFAULT_TEMPLATE_FOLDER_PATH,
+    build,
+)
 
 app = typer.Typer()
 
+
 @app.command()
-def create(template_path: Annotated[Path, typer.Argument()] = DEFAULT_PROFILE_YAML_PATH):
-    print(f"Template path: {template_path}")
+def create(
+    profile_yaml_path: Annotated[Path, typer.Argument()] = DEFAULT_PROFILE_YAML_PATH,
+    template_folder_path: Annotated[
+        Path, typer.Argument()
+    ] = DEFAULT_TEMPLATE_FOLDER_PATH,
+    html_template_file_name: Annotated[
+        str, typer.Argument()
+    ] = DEFAULT_HTML_TEMPLATE_FILE_NAME,
+):
+    print(f"Profile yaml path: {profile_yaml_path}")
+    print(f"Template folder path: {template_folder_path}")
+    print(f"Html template file: {html_template_file_name}")
+    build(
+        profile_yaml_path=profile_yaml_path,
+        template_folder_path=template_folder_path,
+        html_template_file_name=html_template_file_name,
+    )
+    print(f"DONE")
